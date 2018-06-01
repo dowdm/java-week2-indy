@@ -4,7 +4,7 @@
 
 {{#if teams}}
     {{#each teams }}
-    <p>{{ teamName }} <a href="/teams/{{id}}">see team details...</a></p>
+    <p class="details">{{ teamName }} <a class="more" href="/teams/{{id}}">see team details...</a></p>
     {{/each}}
 {{else}}
     <p>OMG! No one has signed up yet!</p>

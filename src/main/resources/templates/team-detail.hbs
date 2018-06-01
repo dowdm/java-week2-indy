@@ -1,8 +1,8 @@
 {{#partial "content"}}
-<p>Team:</p>
-<p>{{ team.teamName }}</p>
-<p>{{ team.teamDescription }}</p>
-
+<h1>Team:</h1>
+<p class="details">Team Name: {{ team.teamName }}</p>
+<p class="details">Team Description: {{ team.teamDescription }}</p>
+<p class="details">Team Members: </p>
     {{#each team.teamMembers}}
         <p>{{this}}</p>
     {{/each}}
