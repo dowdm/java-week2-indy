@@ -33,18 +33,30 @@ public class TeamTest {
     }
 
     @Test
-    public void SetTeamName_SetsName_thedogs() throws Exception {
+    public void setTeamName_setsName_thedogs() throws Exception {
         Team newTeam =setupNewTeam();
         newTeam.setTeamName("The Dogs");
         assertEquals("The Dogs", newTeam.getTeamName());
     }
 
     @Test
-    public void SetTeamMembers_SetsTeamMembers_3() throws Exception {
+    public void setTeamMembers_setsTeamMembers_3() throws Exception {
         Team newTeam =setupNewTeam();
         List<String> teamMembers = new ArrayList<String>();
         teamMembers.add("Willy Wonka");
         newTeam.setTeamMembers(teamMembers);
         assertEquals(1, newTeam.getTeamMembers().size());
+    }
+
+    @Test
+    public void setTeamDescription_setsTeamDescription_werock() throws Exception {
+        Team newTeam =setupNewTeam();
+        newTeam.setTeamDescription("We are the best.");
+        assertEquals("We are the best.", newTeam.getTeamDescription());
+    }
+    @Test
+    public void getTeamId_returnsTeamId_1() throws Exception {
+        Team newTeam =setupNewTeam();
+        assertEquals(1, newTeam.getId());
     }
 }
