@@ -57,5 +57,9 @@ public class Team {
         Team.teamInstances = teamInstances;
     }
 
+    public static void clearAllTeams(){
+        teamInstances.clear();
+    }
+
 
 }
