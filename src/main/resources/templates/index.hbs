@@ -1,0 +1,16 @@
+{{#partial "content"}}
+
+<h1>Team List</h1>
+
+{{#if teams}}
+{{#each teams }}
+
+<p>{{ team.name }} <a href="/posts/{{id}}">read more...</a></p>
+{{/each}}
+{{else}}
+<p>OMG! No one has signed up yet!</p>
+<img src="/images/walle.jpg" width="70%">
+{{/if}}
+{{/partial}}
+
+{{> layout.hbs}}

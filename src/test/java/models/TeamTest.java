@@ -66,10 +66,11 @@ public class TeamTest {
     }
 
     @Test
-    public void addTeamMembers_addsTeamMembers_3() throws Exception {
+    public void addTeamMembers_addsTeamMembers_2() throws Exception {
         Team newTeam =setupNewTeam();
         newTeam.addTeamMember("Ernest Hemingway");
         newTeam.addTeamMember("George Clooney");
         assertEquals(2, newTeam.getTeamMembers().size());
     }
+
 }
