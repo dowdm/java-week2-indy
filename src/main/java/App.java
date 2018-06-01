@@ -34,7 +34,7 @@ public class App {
             newTeam.addTeamMember(memberThree);
             newTeam.addTeamMember(memberFour);
             model.put("teams", newTeam);
-            return new ModelAndView(model, "index.hbs");
+            return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 
     }
