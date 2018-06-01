@@ -9,9 +9,32 @@ public class Team {
     private static ArrayList<Team> teamInstances = new ArrayList<>();
 
     public Team(String teamName, String teamDescription) {
-        this.teamMembers = teamMembers;
         this.teamName = teamName;
         this.teamDescription = teamDescription;
     }
+    public String getTeamName() {
+        return teamName;
+    }
+
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
+    }
+
+    public List<String> getTeamMembers() {
+        return teamMembers;
+    }
+
+    public void setTeamMembers(List<String> teamMembers) {
+        this.teamMembers = teamMembers;
+    }
+
+    public String getTeamDescription() {
+        return teamDescription;
+    }
+
+    public void setTeamDescription(String teamDescription) {
+        this.teamDescription = teamDescription;
+    }
+
 
 }

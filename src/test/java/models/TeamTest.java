@@ -31,4 +31,11 @@ public class TeamTest {
         Team newTeam =setupNewTeam();
         assertEquals(true, newTeam instanceof Team);
     }
+
+    @Test
+    public void SetTeamName_SetsName_thedogs() throws Exception {
+        Team newTeam =setupNewTeam();
+        newTeam.setTeamName("The Dogs");
+        assertEquals("The Dogs", newTeam.getTeamName());
+    }
 }
