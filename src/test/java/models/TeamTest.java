@@ -55,9 +55,16 @@ public class TeamTest {
         newTeam.setTeamDescription("We are the best.");
         assertEquals("We are the best.", newTeam.getTeamDescription());
     }
+
     @Test
     public void getTeamId_returnsTeamId_1() throws Exception {
         Team newTeam =setupNewTeam();
         assertEquals(1, newTeam.getId());
+    }
+
+    @Test
+    public void getTeamInstances_returnsTeamInstances_1() throws Exception {
+        Team newTeam =setupNewTeam();
+        assertEquals(1, Team.getTeamInstances().size());
     }
 }
