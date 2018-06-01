@@ -1,10 +1,11 @@
 {{#partial "content"}}
 <p>Team:</p>
 <p>{{ team.teamName }}</p>
-<p>{{ team.description }}</p>
-{{#each team.teamMembers}}
-    <p>{{this}}</p>
-{{/each}}
+<p>{{ team.teamDescription }}</p>
+
+    {{#each team.teamMembers}}
+        <p>{{this}}</p>
+    {{/each}}
 
 <a href="/teams/{{team.id}}/update">Edit team</a>
 
