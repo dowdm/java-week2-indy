@@ -70,7 +70,7 @@ public class Team {
         this.teamName = inputName;
         this.teamDescription = inputDescription;
     }
-
+// removeTeamMember not implemented in actual app
     public void removeTeamMember(int id) {
         teamMembers.remove(id-1);
     }
