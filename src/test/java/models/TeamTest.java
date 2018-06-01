@@ -38,4 +38,13 @@ public class TeamTest {
         newTeam.setTeamName("The Dogs");
         assertEquals("The Dogs", newTeam.getTeamName());
     }
+
+    @Test
+    public void SetTeamMembers_SetsTeamMembers_3() throws Exception {
+        Team newTeam =setupNewTeam();
+        List<String> teamMembers = new ArrayList<String>();
+        teamMembers.add("Willy Wonka");
+        newTeam.setTeamMembers(teamMembers);
+        assertEquals(1, newTeam.getTeamMembers().size());
+    }
 }
