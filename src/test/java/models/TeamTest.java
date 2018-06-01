@@ -16,9 +16,6 @@ public class TeamTest {
     }
 
     public Team setupNewTeam(){
-        List<String> teamMembers = new ArrayList<String>();
-        teamMembers.add("Mike Smith");
-        teamMembers.add("Frankie Hazel");
         return new Team("The Tigers", "Coders with cats, creating pet apps");
     }
 
@@ -66,5 +63,13 @@ public class TeamTest {
     public void getTeamInstances_returnsTeamInstances_1() throws Exception {
         Team newTeam =setupNewTeam();
         assertEquals(1, Team.getTeamInstances().size());
+    }
+
+    @Test
+    public void addTeamMembers_addsTeamMembers_3() throws Exception {
+        Team newTeam =setupNewTeam();
+        newTeam.addTeamMember("Ernest Hemingway");
+        newTeam.addTeamMember("George Clooney");
+        assertEquals(2, newTeam.getTeamMembers().size());
     }
 }

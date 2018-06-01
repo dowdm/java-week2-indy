@@ -61,5 +61,9 @@ public class Team {
         teamInstances.clear();
     }
 
+    public void addTeamMember(String name) {
+        teamMembers.add(name);
+    }
+
 
 }
