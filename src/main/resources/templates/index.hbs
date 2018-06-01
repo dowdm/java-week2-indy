@@ -1,14 +1,16 @@
 {{#partial "content"}}
 
-<h1>Team List</h1>
+<h1 class="center" id="underline">Team List</h1>
 
 {{#if teams}}
     {{#each teams }}
     <p class="details">{{ teamName }} <a class="more" href="/teams/{{id}}">see team details...</a></p>
     {{/each}}
 {{else}}
-    <p>OMG! No one has signed up yet!</p>
-    <img src="/images/walle.jpg" width="70%">
+    <div class="center">
+        <p>OMG! No one has signed up yet!</p>
+        <img src="/images/walle.jpg" height="200px">
+    </div>
 {{/if}}
 {{/partial}}
 

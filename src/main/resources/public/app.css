@@ -6,3 +6,11 @@
 .more{
     font-size: 12px;
 }
+
+.center{
+    text-align: center;
+}
+
+#underline{
+    text-decoration: underline;
+}

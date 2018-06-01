@@ -23,7 +23,7 @@
 
 ## Setup/Installation Requirements
 * To view project code, visit: https://github.com/dowdm/java-week2-indy.git
-* To view project from build, clone or download project from https://github.com/dowdm/java-week2-indy.git . Compile the App.java file in a Java compiler or IDE such as IntelliJ. Run App. Open a browser to http://localhost:4567 . Enjoy. 
+* To view project from build: clone or download project from https://github.com/dowdm/java-week2-indy.git . Install developer dependencies(Spark, Handlebars, JUnit). Compile the App.java file in a Java compiler or IDE such as IntelliJ. Run App. Open a browser to http://localhost:4567 . Enjoy. 
 
 
 
