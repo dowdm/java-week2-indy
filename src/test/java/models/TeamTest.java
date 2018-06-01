@@ -86,4 +86,12 @@ public class TeamTest {
         assertEquals(2, Team.findById(otherTeam.getId()).getId());
     }
 
+    @Test
+    public void update_updateChangesTeam() throws Exception {
+        Team newTeam = setupNewTeam();
+        newTeam.update("The Bobcats", "We build robots");
+        assertEquals("The Bobcats", newTeam.getTeamName());
+        assertEquals("We build robots", newTeam.getTeamDescription());
+    }
+
 }

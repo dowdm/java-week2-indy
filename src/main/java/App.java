@@ -54,6 +54,24 @@ public class App {
             return new ModelAndView(model, "newteam-form.hbs");
         }, new HandlebarsTemplateEngine());
 
+        post("/teams/:id/update", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            String teamName = request.queryParams("name");
+            String teamDescription = request.queryParams("description");
+            String memberOne = request.queryParams("memberOne");
+            String memberTwo = request.queryParams("memberTwo");
+            String memberThree = request.queryParams("memberThree");
+            String memberFour = request.queryParams("memberFour");
+            int idOfTeamToEdit = Integer.parseInt(request.params("id"));
+            Team editTeam = Team.findById(idOfTeamToEdit);
+            editTeam.update(teamName, teamDescription);
+            editTeam.addTeamMember(memberOne);
+            editTeam.addTeamMember(memberTwo);
+            editTeam.addTeamMember(memberThree);
+            editTeam.addTeamMember(memberFour);
+            return new ModelAndView(model, "success.hbs");
+        }, new HandlebarsTemplateEngine());
+
 
     }
 }

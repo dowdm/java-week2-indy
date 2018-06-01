@@ -69,6 +69,11 @@ public class Team {
         return teamInstances.get(id-1);
     }
 
+    public void update(String inputName, String inputDescription) {
+        this.teamName = inputName;
+        this.teamDescription = inputDescription;
+    }
+
 
 
 }
