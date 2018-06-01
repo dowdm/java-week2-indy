@@ -93,4 +93,12 @@ public class TeamTest {
         assertEquals("The Bobcats", newTeam.getTeamName());
         assertEquals("We build robots", newTeam.getTeamDescription());
     }
+    @Test
+    public void removeTeamMembers_removesTeamMember_1() throws Exception {
+        Team newTeam =setupNewTeam();
+        newTeam.addTeamMember("Ernest Hemingway");
+        newTeam.addTeamMember("George Clooney");
+        newTeam.removeTeamMember(1);
+        assertEquals(1, newTeam.getTeamMembers().size());
+    }
 }

@@ -7,9 +7,6 @@ public class Team {
     private List<String> teamMembers = new ArrayList<String>();
     private String teamDescription;
     private int id;
-
-
-
     private static ArrayList<Team> teamInstances = new ArrayList<>();
 
     public Team(String teamName, String teamDescription) {
@@ -72,6 +69,10 @@ public class Team {
     public void update(String inputName, String inputDescription) {
         this.teamName = inputName;
         this.teamDescription = inputDescription;
+    }
+
+    public void removeTeamMember(int id) {
+        teamMembers.remove(id-1);
     }
 
 
