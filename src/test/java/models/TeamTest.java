@@ -73,4 +73,17 @@ public class TeamTest {
         assertEquals(2, newTeam.getTeamMembers().size());
     }
 
+    @Test
+    public void findById_ReturnsCorrectTeam_1() throws Exception {
+        Team newTeam = setupNewTeam();
+        assertEquals(1, Team.findById(newTeam.getId()).getId());
+    }
+
+//    @Test
+//    public void findReturnsCorrectPostWhenMoreThanOnePostExists() throws Exception {
+//        Post post = setupNewPost();
+//        Post otherPost = new Post("How to pair successfully");
+//        assertEquals(2, Post.findById(otherPost.getId()).getId());
+//    }
+
 }

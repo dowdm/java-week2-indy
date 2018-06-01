@@ -65,6 +65,10 @@ public class Team {
         teamMembers.add(name);
     }
 
+    public static Team findById(int id){
+        return teamInstances.get(id-1);
+    }
+
 
 
 }
