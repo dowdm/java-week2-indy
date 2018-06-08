@@ -102,13 +102,13 @@ public class App {
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 
-//        get("/teams/:id/members/delete", (req, res) -> {
-//            Map<String, Object> model = new HashMap<>();
-//            int idOfTeamToEdit = Integer.parseInt(req.params("id"));
-//            List<Member> teamMembers = teamDao.getAllMembersByTeamId(idOfTeamToEdit);
-//            model.put("members", teamMembers);
-//            return new ModelAndView(model, "editmembers-form.hbs");
-//        }, new HandlebarsTemplateEngine());
+        get("/members/:id/delete", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            int idOfMemberToDelete = Integer.parseInt(req.params("id"));
+            memberDao.deleteById(idOfMemberToDelete);
+            res.redirect("/teams");
+            return null;
+        }, new HandlebarsTemplateEngine());
 
         get("/teams/:id/delete", (req, res) -> {
             Map<String, Object> model = new HashMap<>();

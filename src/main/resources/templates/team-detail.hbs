@@ -4,12 +4,13 @@
 <p class="details">Team Description: {{ team.teamDescription }}</p>
 <p class="details">Team Members: </p>
     {{#each members}}
-        <p>{{name}}</p>
+        <p>{{name}}<a href="/members/{{id}}/delete">..... Delete this member</a></p>
     {{/each}}
+<button><a href="/teams/{{team.id}}/update">Edit team</a></button>
+<button><a href="/teams/{{team.id}}/delete">Delete this team</a></button>
 
-<a href="/teams/{{team.id}}/update">Edit team</a>
-<a href="/teams/{{team.id}}/delete">Delete this team</a>
-<a href="/teams/{{team.id}}/members/delete">Remove members</a>
+
+
 
 
 {{/partial}}
