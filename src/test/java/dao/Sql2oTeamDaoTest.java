@@ -80,6 +80,15 @@ public class Sql2oTeamDaoTest {
     }
 
     @Test
-    public void getAllTeamsByTeamId() {
+    public void getAllMembersByTeamId() {
+        Team newTeam = setupNewTeam();
+        teamDao.add(newTeam);
+        int id = newTeam.getId();
+        Member newMember = new Member("Brad", id);
+        Member otherMember = new Member("Jessica", id);
+        memberDao.add(newMember);
+        memberDao.add(otherMember);
+        assertEquals(2, teamDao.getAllMembersByTeamId(id).size());
+
     }
 }
