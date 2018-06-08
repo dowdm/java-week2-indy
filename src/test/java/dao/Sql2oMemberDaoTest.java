@@ -1,6 +1,7 @@
 package dao;
 
 import models.Member;
+import org.junit.runner.notification.RunListener;
 import org.sql2o.*;
 import org.junit.*;
 
@@ -52,5 +53,15 @@ public class Sql2oMemberDaoTest {
         Member newMember = setupNewMember();
         memberDao.add(newMember);
         assertEquals(1, memberDao.getAll().size());
+    }
+
+    @Test
+    public void update(){
+        Member newMember = setupNewMember();
+        memberDao.add(newMember);
+        int id = newMember.getId();
+        memberDao.update(id, "Kenny Loggins");
+        Member updatedMember = memberDao.findById(id);
+        assertEquals("Kenny Loggins", updatedMember.getName());
     }
 }

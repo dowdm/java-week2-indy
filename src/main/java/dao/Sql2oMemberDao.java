@@ -31,7 +31,7 @@ public class Sql2oMemberDao implements MemberDao{
 
     @Override
     public void update(int id, String newName){
-        String sql = "UPDATE members SET name = :content WHERE id=:id";
+        String sql = "UPDATE members SET name = :name WHERE id=:id";
         try(Connection con = sql2o.open()){
             con.createQuery(sql)
                     .addParameter("name", newName)
