@@ -3,8 +3,8 @@
 <p class="details">Team Name: {{ team.teamName }}</p>
 <p class="details">Team Description: {{ team.teamDescription }}</p>
 <p class="details">Team Members: </p>
-    {{#each team.teamMembers}}
-        <p>{{this}}</p>
+    {{#each members}}
+        <p>{{name}}</p>
     {{/each}}
 
 <a href="/teams/{{team.id}}/update">Edit team</a>
