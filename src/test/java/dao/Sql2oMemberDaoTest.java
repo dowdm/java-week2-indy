@@ -1,12 +1,9 @@
 package dao;
 
 import models.Member;
-import org.junit.runner.notification.RunListener;
 import org.sql2o.*;
 import org.junit.*;
-
 import java.util.List;
-
 import static org.junit.Assert.*;
 
 public class Sql2oMemberDaoTest {
