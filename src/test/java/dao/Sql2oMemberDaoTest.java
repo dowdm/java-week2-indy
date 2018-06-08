@@ -38,11 +38,19 @@ public class Sql2oMemberDaoTest {
         assertNotEquals(originalMemberId, newMember.getId());
     }
 
+
     @Test
     public void findById(){
         Member newMember = setupNewMember();
         memberDao.add(newMember);
         Member foundMember = memberDao.findById(newMember.getId());
         assertEquals(newMember, foundMember);
+    }
+
+    @Test
+    public void getAll(){
+        Member newMember = setupNewMember();
+        memberDao.add(newMember);
+        assertEquals(1, memberDao.getAll().size());
     }
 }
