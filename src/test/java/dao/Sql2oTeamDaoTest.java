@@ -49,6 +49,12 @@ public class Sql2oTeamDaoTest {
 
     @Test
     public void update() {
+        Team newTeam = setupNewTeam();
+        teamDao.add(newTeam);
+        int id = newTeam.getId();
+        teamDao.update(id, "The Superheroes","Comic book informed code brigade." );
+        Team updatedTeam = teamDao.findById(id);
+        assertEquals("The Superheroes", updatedTeam.getTeamName());
     }
 
     @Test
