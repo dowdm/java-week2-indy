@@ -1,6 +1,7 @@
 package models;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Team {
     private String teamName;
@@ -38,13 +39,19 @@ public class Team {
     }
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Team team = (Team) o;
+        return id == team.id &&
+                Objects.equals(teamName, team.teamName) &&
+                Objects.equals(teamDescription, team.teamDescription);
+    }
 
+    @Override
+    public int hashCode() {
 
-
-
-
-
-
-
-
+        return Objects.hash(teamName, teamDescription, id);
+    }
 }
