@@ -22,3 +22,9 @@
 .bottom{
     margin-bottom: 30px;
 }
+#bottom{
+    margin-bottom: 30px;
+    color: blue;
+    font-weight: bold;
+}
+
