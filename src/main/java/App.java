@@ -105,15 +105,36 @@ public class App {
         get("/members/:id/delete", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
             int idOfMemberToDelete = Integer.parseInt(req.params("id"));
+            Member editedMember = memberDao.findById(idOfMemberToDelete);
+            int teamId = editedMember.getTeamId();
             memberDao.deleteById(idOfMemberToDelete);
+            res.redirect("/teams/" + teamId);
+            return null;
+        }, new HandlebarsTemplateEngine());
+
+        get("/members/:id/update", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            int idOfMemberToUpdate = Integer.parseInt(req.params("id"));
+            Member editMember = memberDao.findById(idOfMemberToUpdate);
+            model.put("editMember", editMember);
+            return new ModelAndView(model, "editmember-form.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        post("/members/:id/update", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            int idOfMemberToUpdate = Integer.parseInt(req.params("id"));
+            String name = req.queryParams("name");
+            memberDao.update(idOfMemberToUpdate, name);
             res.redirect("/teams");
             return null;
         }, new HandlebarsTemplateEngine());
+
 
         get("/teams/:id/delete", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
             int idOfTeamToDelete = Integer.parseInt(req.params("id"));
             teamDao.deleteById(idOfTeamToDelete);
+            memberDao.deleteAllByTeamId(idOfTeamToDelete);
             res.redirect("/teams");
             return null;
         }, new HandlebarsTemplateEngine());

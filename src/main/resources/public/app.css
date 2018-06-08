@@ -14,3 +14,11 @@
 #underline{
     text-decoration: underline;
 }
+
+.members{
+    font-size: 18px;
+}
+
+.bottom{
+    margin-bottom: 30px;
+}
