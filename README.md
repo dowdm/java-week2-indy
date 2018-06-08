@@ -2,7 +2,7 @@
 
 #### By Matt Dowdney
 
-### This is web based application demonstrating principles of CRUD and REST, programmed in Java. Users may start a team for a Hackathon, initially submitting a team name, description and members. Next users can view a list of teams, select a specific team, view the details for that team, then edit it. Eventually, users may be able to delete teams as well..  
+### This is web based application demonstrating principles of CRUD and REST, programmed in Java. Users may start a team for a Hackathon, initially submitting a team name, description and members. Next users can view a list of teams, select a specific team, and  view the details for that team. Users may also edit a team, edit or delete individual team members, and delete the team and all members of that team entirely.  
 
 ## Specifications
 
