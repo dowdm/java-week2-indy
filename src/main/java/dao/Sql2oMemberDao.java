@@ -65,7 +65,7 @@ public class Sql2oMemberDao implements MemberDao{
 
     @Override
     public void deleteAllByTeamId(int teamId) {
-        String sql = "DELETE from comments WHERE teamId=:teamId";
+        String sql = "DELETE from members WHERE teamId=:teamId";
         try (Connection con = sql2o.open()) {
             con.createQuery(sql)
                     .addParameter("teamId", teamId)

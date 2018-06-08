@@ -77,4 +77,15 @@ public class Sql2oMemberDaoTest {
         assertTrue(allMembers.contains(newMember));
         assertFalse(allMembers.contains(newMemberTwo));
     }
+
+    @Test
+    public void deleteAllByTeamId(){
+        Member newMember = setupNewMember();
+        Member newMemberTwo = setupNewMember();
+        memberDao.add(newMember);
+        memberDao.add(newMemberTwo);
+        memberDao.deleteAllByTeamId(1);
+        List<Member> allMembers = memberDao.getAll();
+        assertEquals(0, allMembers.size());
+    }
 }
