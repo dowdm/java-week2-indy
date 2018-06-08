@@ -2,7 +2,6 @@ package dao;
 
 import models.Member;
 import models.Team;
-
 import java.util.List;
 
 public interface TeamDao {

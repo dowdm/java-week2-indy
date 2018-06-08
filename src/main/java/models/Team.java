@@ -1,13 +1,11 @@
 package models;
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Objects;
 
 public class Team {
     private String teamName;
     private String teamDescription;
     private int id;
-
 
     public Team(String teamName, String teamDescription) {
         this.teamName = teamName;
@@ -30,14 +28,12 @@ public class Team {
         return teamDescription;
     }
 
-
     public void setId(int id) {
         this.id = id;
     }
     public int getId() {
         return id;
     }
-
 
     @Override
     public boolean equals(Object o) {

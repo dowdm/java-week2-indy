@@ -28,7 +28,6 @@ public class Member {
         this.name = name;
     }
 
-
     public int getTeamId() {
         return teamId;
     }
@@ -36,7 +35,6 @@ public class Member {
     public void setTeamId(int teamId) {
         this.teamId = teamId;
     }
-
 
     @Override
     public boolean equals(Object o) {

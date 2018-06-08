@@ -3,7 +3,6 @@ import models.Member;
 import models.Team;
 import dao.Sql2oTeamDao;
 import dao.Sql2oMemberDao;
-
 import org.sql2o.Sql2o;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
@@ -11,7 +10,6 @@ import static spark.Spark.*;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 
 public class App {
     public static void main(String[] args) {
@@ -146,7 +144,6 @@ public class App {
             return null;
         }, new HandlebarsTemplateEngine());
 
-
         get("/teams/:id/delete", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
             int idOfTeamToDelete = Integer.parseInt(req.params("id"));
@@ -155,7 +152,6 @@ public class App {
             res.redirect("/teams");
             return null;
         }, new HandlebarsTemplateEngine());
-
 
     }
 }
