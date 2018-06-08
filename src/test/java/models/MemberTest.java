@@ -20,6 +20,9 @@ public class MemberTest {
     }
 
     @Test
-    public void setName() {
+    public void setName_nameIsSetCorrectly_bobbarker() {
+        Member newMember = new Member("Billy Bob");
+        newMember.setName("Bob Barker");
+        assertEquals("Bob Barker", newMember.getName());
     }
 }
