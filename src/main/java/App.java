@@ -54,14 +54,21 @@ public class App {
             teamDao.add(newTeam);
             int teamId = newTeam.getId();
             Member memberOne = new Member(request.queryParams("memberOne"), teamId);
-            memberDao.add(memberOne);
+            if(!memberOne.getName().equals("")){
+                memberDao.add(memberOne);
+            }
             Member memberTwo = new Member(request.queryParams("memberTwo"), teamId);
-            memberDao.add(memberTwo);
+            if(!memberTwo.getName().equals("")){
+                memberDao.add(memberTwo);
+            }
             Member memberThree = new Member(request.queryParams("memberThree"), teamId);
-            memberDao.add(memberThree);
+            if(!memberThree.getName().equals("")){
+                memberDao.add(memberThree);
+            }
             Member memberFour = new Member(request.queryParams("memberFour"), teamId);
-            memberDao.add(memberFour);
-//            model.put("teams", newTeam);
+            if(!memberFour.getName().equals("")){
+                memberDao.add(memberFour);
+            }
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 
@@ -92,13 +99,21 @@ public class App {
             int idOfTeamToEdit = Integer.parseInt(request.params("id"));
             teamDao.update(idOfTeamToEdit, teamName, teamDescription);
             Member memberOne = new Member(request.queryParams("memberOne"), idOfTeamToEdit);
-            memberDao.add(memberOne);
+            if(!memberOne.getName().equals("")){
+                memberDao.add(memberOne);
+            }
             Member memberTwo = new Member(request.queryParams("memberTwo"), idOfTeamToEdit);
-            memberDao.add(memberTwo);
+            if(!memberTwo.getName().equals("")){
+                memberDao.add(memberTwo);
+            }
             Member memberThree = new Member(request.queryParams("memberThree"), idOfTeamToEdit);
-            memberDao.add(memberThree);
+            if(!memberThree.getName().equals("")){
+                memberDao.add(memberThree);
+            }
             Member memberFour = new Member(request.queryParams("memberFour"), idOfTeamToEdit);
-            memberDao.add(memberFour);
+            if(!memberFour.getName().equals("")){
+                memberDao.add(memberFour);
+            }
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 

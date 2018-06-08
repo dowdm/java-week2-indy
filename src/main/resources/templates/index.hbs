@@ -4,7 +4,8 @@
 
 {{#if teams}}
     {{#each teams }}
-    <p class="details">{{ teamName }} <a class="more" href="/teams/{{id}}">see team details...</a></p>
+    <p class="details">{{ teamName }} <button><a class="more" href="/teams/{{id}}">See Team Details</a></button></p>
+
     {{/each}}
 {{else}}
     <div class="center">
