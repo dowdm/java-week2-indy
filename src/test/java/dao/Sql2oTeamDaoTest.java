@@ -16,6 +16,7 @@ public class Sql2oTeamDaoTest {
     @Before
     public void setUp() throws Exception {
         String connectionString = "jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
+
         Sql2o sql2o = new Sql2o(connectionString, "", "");
         memberDao = new Sql2oMemberDao(sql2o);
         teamDao = new Sql2oTeamDao(sql2o);
@@ -41,6 +42,9 @@ public class Sql2oTeamDaoTest {
 
     @Test
     public void getAll() {
+        Team newTeam = setupNewTeam();
+        teamDao.add(newTeam);
+        assertEquals(1, teamDao.getAll().size());
     }
 
     @Test
