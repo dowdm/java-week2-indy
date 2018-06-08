@@ -112,7 +112,8 @@ public class App {
             if(!memberFour.getName().equals("")){
                 memberDao.add(memberFour);
             }
-            return new ModelAndView(model, "success.hbs");
+            response.redirect("/teams/" + idOfTeamToEdit);
+            return null;
         }, new HandlebarsTemplateEngine());
 
         get("/members/:id/delete", (req, res) -> {
