@@ -25,4 +25,11 @@ public class MemberTest {
         newMember.setName("Bob Barker");
         assertEquals("Bob Barker", newMember.getName());
     }
+
+    @Test
+    public void setTeamId_setsTeamId_1() {
+        Member newMember = new Member("Billy Bob");
+        newMember.setTeamId(1);
+        assertEquals(1, newMember.getTeamId());
+    }
 }

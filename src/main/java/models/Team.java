@@ -7,13 +7,12 @@ public class Team {
     private List<String> teamMembers = new ArrayList<String>();
     private String teamDescription;
     private int id;
-    private static ArrayList<Team> teamInstances = new ArrayList<>();
+
 
     public Team(String teamName, String teamDescription) {
         this.teamName = teamName;
         this.teamDescription = teamDescription;
-        teamInstances.add(this);
-        this.id = teamInstances.size();
+
     }
     public String getTeamName() {
         return teamName;
@@ -46,34 +45,11 @@ public class Team {
         this.id = id;
     }
 
-    public static ArrayList<Team> getTeamInstances() {
-        return teamInstances;
-    }
 
-    public static void setTeamInstances(ArrayList<Team> teamInstances) {
-        Team.teamInstances = teamInstances;
-    }
 
-    public static void clearAllTeams(){
-        teamInstances.clear();
-    }
 
-    public void addTeamMember(String name) {
-        teamMembers.add(name);
-    }
 
-    public static Team findById(int id){
-        return teamInstances.get(id-1);
-    }
 
-    public void update(String inputName, String inputDescription) {
-        this.teamName = inputName;
-        this.teamDescription = inputDescription;
-    }
-// removeTeamMember not implemented in actual app
-    public void removeTeamMember(int id) {
-        teamMembers.remove(id-1);
-    }
 
 
 
