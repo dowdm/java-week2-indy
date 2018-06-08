@@ -125,7 +125,9 @@ public class App {
             int idOfMemberToUpdate = Integer.parseInt(req.params("id"));
             String name = req.queryParams("name");
             memberDao.update(idOfMemberToUpdate, name);
-            res.redirect("/teams");
+            Member editedMember = memberDao.findById(idOfMemberToUpdate);
+            int teamId = editedMember.getTeamId();
+            res.redirect("/teams/" + teamId);
             return null;
         }, new HandlebarsTemplateEngine());
 
