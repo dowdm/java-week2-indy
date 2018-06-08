@@ -5,11 +5,11 @@ import java.util.Objects;
 public class Member {
     private int id;
     private String name;
-
     private int teamId;
 
-    public Member (String name){
+    public Member (String name, int teamId){
         this.name= name;
+        this.teamId = teamId;
     }
 
     public int getId() {
