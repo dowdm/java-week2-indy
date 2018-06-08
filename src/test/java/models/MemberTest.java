@@ -13,7 +13,10 @@ public class MemberTest {
     }
 
     @Test
-    public void setId() {
+    public void setId_setsMemberId_1() {
+        Member newMember = new Member("Billy Bob");
+        newMember.setId(1);
+        assertEquals(1, newMember.getId());
     }
 
     @Test
