@@ -4,7 +4,6 @@ import java.util.List;
 
 public class Team {
     private String teamName;
-    private List<String> teamMembers = new ArrayList<String>();
     private String teamDescription;
     private int id;
 
@@ -14,36 +13,31 @@ public class Team {
         this.teamDescription = teamDescription;
 
     }
-    public String getTeamName() {
-        return teamName;
-    }
 
     public void setTeamName(String teamName) {
         this.teamName = teamName;
     }
-
-    public List<String> getTeamMembers() {
-        return teamMembers;
+    public String getTeamName() {
+        return teamName;
     }
 
-    public void setTeamMembers(List<String> teamMembers) {
-        this.teamMembers = teamMembers;
-    }
 
+    public void setTeamDescription(String teamDescription) {
+        this.teamDescription = teamDescription;
+    }
     public String getTeamDescription() {
         return teamDescription;
     }
 
-    public void setTeamDescription(String teamDescription) {
-        this.teamDescription = teamDescription;
+
+    public void setId(int id) {
+        this.id = id;
     }
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+
 
 
 
